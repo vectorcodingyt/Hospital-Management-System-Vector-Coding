@@ -1,49 +1,125 @@
-# Hospital-Management-System-Vector-Coding
-A full-featured PHP-based Hospital Management System (HMS) with admin, doctor, patient, and IPD panels. Supports appointments, medical reports, complaints, job applications, financial tracking, and patient ID generation. Efficient and user-friendly.
+🏥 Hospital Management System - Setup Guide
 
-🏥 Hospital Management System Features
-🌐 Public Features
-Users can submit an appointment form.
-Users can check their appointment status.
-Users can view or download their medical reports using UHID and patient name.
-Integrated live chat system for public inquiries (basic).
-Users can apply for job vacancies via the job application form.
+🔐 Login Details
+Role	Username	Password
+Admin	admin	admin
+IPD/Account	manager	admin
+Doctor	arif	admin
+Staff/Employee	staff	admin
+Patient	patient3	admin
 
-🔐 Admin Panel Features
-Manage all other admin accounts.
-View, manage, and delete doctor profiles.
-Access and delete all patient records.
-View and delete user/patient complaints.
-Review and approve job applications.
-Publish or hide job posts via toggle (visible on homepage if enabled).
-View income reports, test records, and financial transactions.
-Add new admin, staff, employees, or branch/account managers.
-Manage own profile and credentials.
+Follow these steps to set up and run the Hospital Management System locally.
 
-🩺 Doctor Panel Features
-Manage doctor profile.
-View appointment bookings by department or doctor ID.
-Refer patients to other doctors by department or name.
-Mark patient visits as completed.
-Access patient reports via UHID.
-View full list of consulted patients.
+📦 1. Prerequisites
+XAMPP installed on your system.
 
-👤 Patient Panel Features
-Manage patient profile.
-View appointment requests, invoices, prescriptions, and appointment history.
-Access all medical reports directly from the dashboard.
-Submit complaints from the dashboard.
-Send premium appointment requests.
-View full invoice and complaint history.
+A copy of the Hospital Management System project folder.
 
-🧾 IPD / Account Branch Features
-View and manage pending appointments.
-Redirect to registration page after approving appointments.
-Generate and print Patient ID Card (with UHID) upon registration.
+Copy the project folder to:
 
+C:\xampp\htdocs\hospital
+Open XAMPP Control Panel and start:
 
-!Import the SQL database file into MySQL.
-Update database credentials in the config file.
-Deploy the project on a local server (XAMPP/LAMP) or a live server.
+Open XAMPP Control Panel and start:
+Turn On
+Apache
+MySQL
 
+Open your browser and go to:
+http://localhost/phpmyadmin
 
+Create a new database named: hospital
+Import the provided .sql file into the hospital database.
+
+download the sql file from 
+https://www.vectorcoding.com/2024/05/hospital-management-system-php-nodejs.html
+
+For tutorials and resources, visit our blog:
+🔗 procoderarifbd.blogspot.com
+
+# 🏥 Hospital Management System
+
+A PHP-based Hospital Management System with role-based login (Admin, Doctor, Patient, Staff, IPD) designed to streamline appointments, reporting, staff coordination, and hospital operations.
+
+---
+
+## 🔐 Login Credentials
+
+| Role           | Username   | Password |
+|----------------|------------|----------|
+| Admin          | `admin`    | `admin`  |
+| IPD/Account    | `manager`  | `admin`  |
+| Doctor         | `arif`     | `admin`  |
+| Staff/Employee | `staff`    | `admin`  |
+| Patient        | `patient3` | `admin`  |
+
+---
+
+## 🚀 Getting Started
+
+Follow the steps below to set up and run the project on your local machine:
+
+### 📦 Prerequisites
+- [XAMPP](https://www.apachefriends.org/) installed
+- This project downloaded into your system
+
+### ⚙️ Installation Steps
+
+1. Move the project folder to:
+C:\xampp\htdocs\hospital
+
+markdown
+Copy
+Edit
+2. Start **Apache** and **MySQL** from the XAMPP Control Panel.
+3. Open your browser and visit:
+http://localhost/phpmyadmin
+
+css
+Copy
+Edit
+4. Create a database named:
+hospital
+
+yaml
+Copy
+Edit
+5. Import the provided SQL file into the `hospital` database.
+
+---
+
+## 💻 Running the App
+
+1. Visit:
+http://localhost/hospital/index.php
+
+2. Select your role (Admin, Patient, Doctor, etc.).
+3. Use the credentials above to log in.
+
+---
+
+## 📎 Note
+
+After logging in, the system may redirect to our official tutorial site for additional resources:
+
+🔗 https:Vectorcoding.com
+
+---
+
+## 🛠 Troubleshooting
+
+- Ensure **Apache** and **MySQL** are running.
+- Make sure all tables are successfully imported into the database.
+- Double-check DB credentials if the connection fails.
+
+---
+
+## 📚 Learn More
+
+Detailed guides and resources can be found on our blog:
+
+🔗  Vectorcoding.com
+
+---
+
+© 2024 Vectorcoding.com | All Rights Reserved
