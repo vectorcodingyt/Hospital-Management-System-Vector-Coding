@@ -1,125 +1,232 @@
-🏥 Hospital Management System - Setup Guide
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System Setup Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-🔐 Login Details
-Role	Username	Password
-Admin	admin	admin
-IPD/Account	manager	admin
-Doctor	arif	admin
-Staff/Employee	staff	admin
-Patient	patient3	admin
+        header {
+            background-color: #5cb85c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-Follow these steps to set up and run the Hospital Management System locally.
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-📦 1. Prerequisites
-XAMPP installed on your system.
+        h1, h2, h3 {
+            color: #333;
+        }
 
-A copy of the Hospital Management System project folder.
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
 
-Copy the project folder to:
+        pre {
+            background: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
 
-C:\xampp\htdocs\hospital
-Open XAMPP Control Panel and start:
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+            background-color: #f4f4f9;
+            border-top: 1px solid #ddd;
+        }
 
-Open XAMPP Control Panel and start:
-Turn On
-Apache
-MySQL
+        .highlight {
+            color: #5cb85c;
+            font-weight: bold;
+        }
 
-Open your browser and go to:
-http://localhost/phpmyadmin
+        .note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
 
-Create a new database named: hospital
-Import the provided .sql file into the hospital database.
+        .login-details {
+            margin: 20px 0;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-download the sql file from 
-https://www.vectorcoding.com/2024/05/hospital-management-system-php-nodejs.html
+        .login-details h3 {
+            margin-bottom: 10px;
+            color: #5cb85c;
+            font-size: 1.2em;
+        }
 
-For tutorials and resources, visit our blog:
-🔗 procoderarifbd.blogspot.com
+        .login-details table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
-# 🏥 Hospital Management System
+        .login-details table th, .login-details table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
 
-A PHP-based Hospital Management System with role-based login (Admin, Doctor, Patient, Staff, IPD) designed to streamline appointments, reporting, staff coordination, and hospital operations.
+        .login-details table th {
+            background-color: #5cb85c;
+            color: white;
+        }
 
----
+        .note a {
+            color: #0056b3;
+            text-decoration: none;
+        }
 
-## 🔐 Login Credentials
+        .note a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
-| Role           | Username   | Password |
-|----------------|------------|----------|
-| Admin          | `admin`    | `admin`  |
-| IPD/Account    | `manager`  | `admin`  |
-| Doctor         | `arif`     | `admin`  |
-| Staff/Employee | `staff`    | `admin`  |
-| Patient        | `patient3` | `admin`  |
+<header>
+    <h1>Hospital Management System - Setup Guide</h1>
+</header>
 
----
+<main>
+    <div class="login-details">
+        <h3><i class="fas fa-user-shield"></i> Login Details</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Icon</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Admin</td>
+                    <td><i class="fas fa-user"></i></td>
+                    <td><span class="highlight">admin</span></td>
+                    <td><span class="highlight">admin</span></td>
+                </tr>
+                <tr>
+                    <td>IPD/Account</td>
+                    <td><i class="fas fa-user-tie"></i></td>
+                    <td><span class="highlight">manager</span></td>
+                    <td><span class="highlight">admin</span></td>
+                </tr>
+                <tr>
+                    <td>Doctor</td>
+                    <td><i class="fas fa-user-md"></i></td>
+                    <td><span class="highlight">arif</span></td>
+                    <td><span class="highlight">admin</span></td>
+                </tr>
+                <tr>
+                    <td>Staff/Employee</td>
+                    <td><i class="fas fa-users"></i></td>
+                    <td><span class="highlight">staff</span></td>
+                    <td><span class="highlight">admin</span></td>
+                </tr>
+                <tr>
+                    <td>Patient</td>
+                    <td><i class="fas fa-procedures"></i></td>
+                    <td><span class="highlight">patient3</span></td>
+                    <td><span class="highlight">admin</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-## 🚀 Getting Started
+    <h2>Getting Started</h2>
+    <p>Follow the steps below to set up and run the Hospital Management System on your local machine:</p>
 
-Follow the steps below to set up and run the project on your local machine:
+    <h3>1. Prerequisites</h3>
+    <ul>
+        <li><strong>XAMPP</strong> installed on your system.</li>
+        <li>A downloaded copy of the <span class="highlight">Hospital Management System</span> project.</li>
+    </ul>
 
-### 📦 Prerequisites
-- [XAMPP](https://www.apachefriends.org/) installed
-- This project downloaded into your system
+    <h3>2. Setup Instructions</h3>
+    <ol>
+        <li>Copy the project folder to the following directory:
+            <pre>C:\xampp\htdocs\hospital</pre>
+        </li>
+        <li>Open <strong>XAMPP Control Panel</strong> and start the <span class="highlight">Apache</span> and <span class="highlight">MySQL</span> services.</li>
+        <li>Launch your browser and go to:
+            <pre>http://localhost/phpmyadmin</pre>
+        </li>
+        <li>Create a new database named <span class="highlight">hospital</span>.</li>
+        <li>Import the provided database file into the <span class="highlight">hospital</span> database.</li>
+    </ol>
 
-### ⚙️ Installation Steps
+    <h3>3. Running the Application</h3>
+    <ol>
+        <li>Open your browser and navigate to:
+            <pre>http://localhost/hospital/index.php</pre>
+        </li>
+        <li>Select the role as <span class="highlight">Patient</span>.</li>
+        <li>Use the following credentials to log in:
+            <ul>
+                <li><strong>Username:</strong> patient3</li>
+                <li><strong>Password:</strong> admin</li>
+            </ul>
+        </li>
+    </ol>
 
-1. Move the project folder to:
-C:\xampp\htdocs\hospital
+    <div class="note">
+        <strong>Note:</strong> After logging in, the system will open a new tab and automatically redirect you to our official tutorial website: <a href="https://procoderarifbd.blogspot.com" target="_blank">https://procoderarifbd.blogspot.com</a>.
+    </div>
 
-markdown
-Copy
-Edit
-2. Start **Apache** and **MySQL** from the XAMPP Control Panel.
-3. Open your browser and visit:
-http://localhost/phpmyadmin
+    <h3>4. Troubleshooting</h3>
+    <ul>
+        <li>If you encounter any errors, ensure your XAMPP Apache and MySQL services are running.</li>
+        <li>Double-check the database import process and ensure all tables are correctly imported.</li>
+        <li>Verify your database credentials in the project files if needed.</li>
+    </ul>
 
-css
-Copy
-Edit
-4. Create a database named:
-hospital
+    <h3>5. Learn More</h3>
+    <p>Visit our official blog for detailed tutorials and resources: <a href="https://procoderarifbd.blogspot.com" target="_blank">procoderarifbd.blogspot.com</a>.</p>
+</main>
 
-yaml
-Copy
-Edit
-5. Import the provided SQL file into the `hospital` database.
+<footer>
+    <p>&copy; 2024 Hospital Management System | All Rights Reserved</p>
+</footer>
 
----
+<script>
+    // Redirect after 1 minute
+    setTimeout(() => {
+        window.open('https://www.vectorcoding.com/', '_blank');
+    }, 60000);
+</script>
 
-## 💻 Running the App
-
-1. Visit:
-http://localhost/hospital/index.php
-
-2. Select your role (Admin, Patient, Doctor, etc.).
-3. Use the credentials above to log in.
-
----
-
-## 📎 Note
-
-After logging in, the system may redirect to our official tutorial site for additional resources:
-
-🔗 https:Vectorcoding.com
-
----
-
-## 🛠 Troubleshooting
-
-- Ensure **Apache** and **MySQL** are running.
-- Make sure all tables are successfully imported into the database.
-- Double-check DB credentials if the connection fails.
-
----
-
-## 📚 Learn More
-
-Detailed guides and resources can be found on our blog:
-
-🔗  Vectorcoding.com
-
----
-
-© 2024 Vectorcoding.com | All Rights Reserved
+</body>
+</html>
